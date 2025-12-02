@@ -1,0 +1,56 @@
+body {
+    font-family: "Poppins", sans-serif;
+    
+}
+
+#main {
+    max-width: 850px;
+    background: #E8D1C5;
+    box-shadow: 0 8px 25px rgba(20, 10, 10, 0.45);
+    
+}
+
+.name{
+    font-size: 100px;
+    color: #ffffff;
+}
+
+.updateTransaction{
+    color: white;
+    background: #452829;
+}
+
+input, select {
+    border-radius: 8px;
+}
+
+button {
+    border-radius: 8px;
+}
+
+#balance-card {
+    background: #452829;
+    width: 100%;
+    
+}
+
+#balanceAmount {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #444;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+.transaction-row:hover {
+    background: #f8f9fa;
+}

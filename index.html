@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+    <script src="script.js" defer></script>
+</head>
+<body >
+    <div id="main" class="container my-5 p-4 shadow ">
+
+        <div class="text-center mb-4">
+            <h1 class="fw-bold name">EXPENSIA</h1>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center mb-4">
+            <h6 class="me-3 mt-1 fw-bold">CHOOSE YOUR CURRENCY :</h6>
+            <select id="currencySelect" class="form-select w-auto"></select>
+        </div>
+
+        <div class="p-5   rounded text-white text-center mb-4" id="balance-card">
+            <h4 class="balance">BALANCE</h4>
+            <h2 id="balanceAmount">0</h2>
+
+            <div class="d-flex justify-content-around text-center mt-3">
+                <div>
+                    <h5>CREDIT</h5>
+                    <p class="fs-4 text-success fw-bold" id="creditAmount">+0</p>
+                </div>
+                <div>
+                    <h5>DEBIT</h5>
+                    <p class="fs-4 text-danger fw-bold" id="debitAmount">-0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <h3 class="mb-3 fw-bold">Update Transaction</h3>
+
+            <div class="row g-3">
+
+                <div class="col-md-6">
+                    <label class="form-label">Title</label>
+                    <input type="text" id="titleInput" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Amount</label>
+                    <input type="number" id="amountInput" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Date & Time</label>
+                    <input type="datetime-local" id="dateInput" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Type</label>
+                    <select id="typeInput" class="form-select">
+                        <option value="">Select Type</option>
+                        <option value="credit">Credit</option>
+                        <option value="debit">Debit</option>
+                    </select>
+                </div>
+
+                
+
+                <div class="col-12 text-end">
+                    <button onclick="addTransaction()" class="btn btn-light px-5 mt-2">ADD</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h3 class="mb-3 fw-bold">Transaction History</h3>
+
+            <div class="d-flex justify-content-between p-2 bg-secondary text-white rounded">
+                <p class="mb-0 w-25 text-center fw-bold">Title</p>
+                <p class="mb-0 w-25 text-center fw-bold">Amount</p>
+                <p class="mb-0 w-25 text-center fw-bold">Type</p>
+                <p class="mb-0 w-25 text-center fw-bold">Date & Time</p>
+                <p class="mb-0 text-center fw-bold">Action</p>
+            </div>
+
+            <div id="historyBox"></div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
